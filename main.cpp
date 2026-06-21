@@ -29,17 +29,17 @@ void loop()
       servo[i].write(pos[i]);
       delay(10);
       if(pos[i] == 180){
-        Serial.println("mentok le");
+        Serial.println("Reach the limit");
       }
     } else if (buttonSTATEl && pos[i] > 0){
         pos[i] --;
         servo[i].write(pos[i]);
         delay(10);
         if(pos[i] == 0){
-          Serial.println("mentok le");
+          Serial.println("Reach the limit");
         }
     } else if(buttonSTATEr && buttonSTATEl){
-      Serial.println("gagal le");
+      Serial.println("Failed");
     }
   }
 }

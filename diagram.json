@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "author": "NUR ANNISA WIRYANI",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": { "builder": "esp-idf" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -128.2,
+      "left": -182.4,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -89.8,
+      "left": -182.4,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 17.2, "left": 201.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo2", "top": 113.2, "left": 201.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo3", "top": -78.8, "left": 192, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo4", "top": 209.2, "left": 201.6, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": -13,
+      "left": -182.4,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn4",
+      "top": 25.4,
+      "left": -182.4,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn5",
+      "top": 121.4,
+      "left": -182.4,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn6",
+      "top": 159.8,
+      "left": -182.4,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn7",
+      "top": 275,
+      "left": -182.4,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn8",
+      "top": 227,
+      "left": -182.4,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "servo1:V+", "esp:5V", "red", [ "h-28.8", "v153.7", "h-168.19" ] ],
+    [ "servo2:V+", "esp:5V", "red", [ "h-19.2", "v67.3", "h-153.6" ] ],
+    [ "servo3:PWM", "esp:16", "cyan", [ "h-9.6", "v144.2" ] ],
+    [ "servo1:PWM", "esp:17", "orange", [ "h-9.6", "v38.6" ] ],
+    [ "servo2:PWM", "esp:18", "yellow", [ "h-38.4", "v-76.6" ] ],
+    [ "servo4:PWM", "esp:19", "violet", [ "h-96", "v-182.2" ] ],
+    [ "servo4:V+", "esp:5V", "red", [ "h0" ] ],
+    [ "servo3:V+", "esp:5V", "red", [ "h-76.8", "v268.9", "h-110.59" ] ],
+    [ "servo3:GND", "esp:GND.2", "black", [ "h0" ] ],
+    [ "servo1:GND", "esp:GND.2", "black", [ "h-28.8", "v-38.4" ] ],
+    [ "servo2:GND", "esp:GND.2", "black", [ "h-48", "v-134.4" ] ],
+    [ "servo4:GND", "esp:GND.2", "black", [ "h-67.2", "v-230.4" ] ],
+    [ "btn1:2.r", "esp:GND.1", "black", [ "h77", "v249.8" ] ],
+    [ "btn2:2.r", "esp:GND.1", "black", [ "h67.4", "v86.6" ] ],
+    [ "btn3:2.r", "esp:GND.1", "black", [ "h57.8", "v0.2" ] ],
+    [ "btn4:2.r", "esp:GND.1", "black", [ "h57.8", "v-9.4" ] ],
+    [ "btn5:2.r", "esp:GND.1", "black", [ "h0" ] ],
+    [ "btn6:2.r", "esp:GND.1", "black", [ "h105.8", "v-38.2" ] ],
+    [ "btn8:2.r", "esp:GND.1", "black", [ "h96.2", "v-105.4" ] ],
+    [ "btn7:2.r", "esp:GND.1", "black", [ "h86.6", "v-153.4" ] ],
+    [ "btn1:1.r", "esp:22", "cyan", [ "v0", "h259.4", "v163.2" ] ],
+    [ "btn2:1.r", "esp:23", "cyan", [ "v0", "h240.2", "v115.2" ] ],
+    [ "btn3:1.r", "esp:32", "orange", [ "h105.8", "v86.4" ] ],
+    [ "btn4:1.r", "esp:33", "orange", [ "h96.2", "v57.6" ] ],
+    [ "btn5:1.r", "esp:25", "yellow", [ "v0" ] ],
+    [ "btn6:1.r", "esp:26", "yellow", [ "h9.8", "v-57.6" ] ],
+    [ "btn8:1.r", "esp:27", "magenta", [ "h19.4", "v-115.2" ] ],
+    [ "btn7:1.r", "esp:14", "magenta", [ "h29", "v-153.6" ] ]
+  ],
+  "dependencies": {}
+}
